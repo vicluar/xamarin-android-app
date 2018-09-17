@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaysHotDogs.Core", "RaysHotDogs.Core\RaysHotDogs.Core.csproj", "{05FE1A43-2045-412B-894A-9B09EDF39CBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RaysHotDogs.Core", "RaysHotDogs.Core\RaysHotDogs.Core.csproj", "{05FE1A43-2045-412B-894A-9B09EDF39CBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaysHotDogs", "RaysHotDogs\RaysHotDogs.csproj", "{76A3D113-9063-4DD4-8136-3E6FDA0C6E81}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,12 @@ Global
 		{05FE1A43-2045-412B-894A-9B09EDF39CBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05FE1A43-2045-412B-894A-9B09EDF39CBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05FE1A43-2045-412B-894A-9B09EDF39CBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76A3D113-9063-4DD4-8136-3E6FDA0C6E81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76A3D113-9063-4DD4-8136-3E6FDA0C6E81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76A3D113-9063-4DD4-8136-3E6FDA0C6E81}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{76A3D113-9063-4DD4-8136-3E6FDA0C6E81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76A3D113-9063-4DD4-8136-3E6FDA0C6E81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76A3D113-9063-4DD4-8136-3E6FDA0C6E81}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
