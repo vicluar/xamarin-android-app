@@ -48,11 +48,13 @@ namespace RaysHotDogs.Adapters
 
             if (convertView == null)
             {
-                convertView = _context.LayoutInflater.Inflate(Android.Resource.Layout.ActivityListItem, null);
+                convertView = _context.LayoutInflater.Inflate(Resource.Layout.HotDogRowView, null);
             }
 
-            convertView.FindViewById<TextView>(Android.Resource.Id.Text1).Text = item.Name;
-            convertView.FindViewById<ImageView>(Android.Resource.Id.Icon).SetImageBitmap(imageBitmap);
+            convertView.FindViewById<TextView>(Resource.Id.hotDogNameTextView).Text = item.Name;
+            convertView.FindViewById<TextView>(Resource.Id.shortDescriptionTextView).Text = item.ShortDescription;
+            convertView.FindViewById<TextView>(Resource.Id.priceTextView).Text = "$ " + item.Price;
+            convertView.FindViewById<ImageView>(Resource.Id.hotDogImageView).SetImageBitmap(imageBitmap);
 
             return convertView;
         }
