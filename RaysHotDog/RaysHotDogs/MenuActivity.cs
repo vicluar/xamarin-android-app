@@ -47,12 +47,14 @@ namespace RaysHotDogs
 
         private void AboutButton_Click(object sender, EventArgs e)
         {
-
+            var intent = new Intent(this, typeof(AboutActivity));
+            StartActivity(intent);
         }
 
         private void OrderButton_Click(object sender, EventArgs e)
         {
-
+            var intent = new Intent(this, typeof(HotDogMenuActivity));
+            StartActivity(intent);
         }
     }
 }
