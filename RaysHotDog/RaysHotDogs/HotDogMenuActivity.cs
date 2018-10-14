@@ -12,6 +12,7 @@ using Android.Widget;
 using RaysHotDogs.Adapters;
 using RaysHotDogs.Core.Model;
 using RaysHotDogs.Core.Service;
+using RaysHotDogs.Fragments;
 
 namespace RaysHotDogs
 {
@@ -27,24 +28,32 @@ namespace RaysHotDogs
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.HotDogMenuView);
 
-            _hotDogDataService = new HotDogDataService();
-            _hotDogs = _hotDogDataService.GetAllHotDogs();
+            ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
 
-            _hotDogListView = FindViewById<ListView>(Resource.Id.hotDogListView);
-            _hotDogListView.Adapter = new HotDogListAdapter(this, _hotDogs);
-            _hotDogListView.FastScrollEnabled = true;
-
-            _hotDogListView.ItemClick += _hotDogListView_ItemClick;
+            AddTab("Favorites", Resource.Drawable.FavoritesIcon, new FavoriteHotDogFragment());
+            AddTab("Meat Lovers", Resource.Drawable.MeatLoversIcon, new MeatLoversFragment());
+            AddTab("Veggie Lovers", Resource.Drawable.VeggieLoversIcon, new VeggieLoversFragment());
         }
 
-        private void _hotDogListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        private void AddTab(string tabText, int iconResourceId, Fragment view)
         {
-            var hotDog = _hotDogs[e.Position];
+            var tab = ActionBar.NewTab();
+            tab.SetText(tabText);
+            tab.SetIcon(iconResourceId);
 
-            var intent = new Intent();
-            intent.SetClass(this, typeof(HotDogDetailActivity));
-            intent.PutExtra("selectedHotDogId", hotDog.HotDogId);
-            StartActivityForResult(intent, 100);
+            tab.TabSelected += delegate (object sender, ActionBar.TabEventArgs e)
+            {
+                var fragment = this.FragmentManager.FindFragmentById(Resource.Id.fragmentContainer);
+                if (fragment != null) e.FragmentTransaction.Remove(fragment);
+                e.FragmentTransaction.Add(Resource.Id.fragmentContainer, view);
+            };
+
+            tab.TabUnselected += delegate (object sender, ActionBar.TabEventArgs e)
+            {
+                e.FragmentTransaction.Remove(view);
+            };
+
+            this.ActionBar.AddTab(tab);
         }
 
         protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
