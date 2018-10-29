@@ -3120,6 +3120,9 @@ namespace RaysHotDogs
 			// aapt resource value: 0x7f090012
 			public const int abc_toolbar_collapse_description = 2131296274;
 			
+			// aapt resource value: 0x7f09002f
+			public const int aboutRayButton = 2131296303;
+			
 			// aapt resource value: 0x7f09002a
 			public const int action_settings = 2131296298;
 			
@@ -3134,6 +3137,12 @@ namespace RaysHotDogs
 			
 			// aapt resource value: 0x7f090023
 			public const int character_counter_pattern = 2131296291;
+			
+			// aapt resource value: 0x7f09002e
+			public const int goToRayStoreButton = 2131296302;
+			
+			// aapt resource value: 0x7f09002b
+			public const int orderHotDogButton = 2131296299;
 			
 			// aapt resource value: 0x7f090024
 			public const int password_toggle_content_description = 2131296292;
@@ -3155,6 +3164,12 @@ namespace RaysHotDogs
 			
 			// aapt resource value: 0x7f090014
 			public const int status_bar_notification_info_overflow = 2131296276;
+			
+			// aapt resource value: 0x7f09002d
+			public const int takePictureButton = 2131296301;
+			
+			// aapt resource value: 0x7f09002c
+			public const int viewCartButton = 2131296300;
 			
 			static String()
 			{

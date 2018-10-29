@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">RaysHotDogs</string>
     <string name="action_settings">Settings</string>
+    <string name="orderHotDogButton">Order hot dogs!</string>
+    <string name="viewCartButton">View your cart</string>
+    <string name="takePictureButton">Take a picture with Ray</string>
+    <string name="goToRayStoreButton">Go to Rays store</string>
+    <string name="aboutRayButton">About Rays Hot Dogs</string>
 </resources>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RaysHotDogs</string>
+    <string name="action_settings">Settings</string>
+    <string name="orderHotDogButton">Pedir Hot Dog</string>
+    <string name="viewCartButton">Ver Carrito</string>
+    <string name="takePictureButton">Toma una foto con Ray</string>
+    <string name="goToRayStoreButton">Ir a tienda de Ray</string>
+    <string name="aboutRayButton">Acerca de los Hot Dogs de Ray</string>
+</resources>
